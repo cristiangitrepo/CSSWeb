@@ -10,46 +10,19 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <title>Carrousel</title>
+
+    <script>
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+    </script>
 </head>
 
 <body>
     <header>
-        <h1 style="display: none">Ejercicio</h1>
+        <h1 style="display: none">Página de inicio</h1>
     </header>
-    <nav class="principal" aria-label="Navegación principal">
-        <h2 style="display: none">Menú Principal</h2>
-        <input id="icon-menu" name="icon-menu" type="checkbox" />
-        <label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
+    <nav class="principal" id="header" aria-label="Navegación principal">
 
-        <a href="./index.html" class="logo">
-            <figure>
-                <img src="./assets/img/logo.svg" alt="Main logo">
-            </figure>
-            MI EMPRESA
-        </a>
-
-        <ul>
-            <li>
-                <a href="./index.html">Inicio</a>
-            </li>
-            <li>
-                <a href="#">Temas</a>
-                <ul>
-                    <li>
-                        <a href="#">Textos</a>
-                    </li>
-                    <li>
-                        <a href="#">Imagenes</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="./formularios.html">Nosotros</a>
-            </li>
-            <li>
-                <a href="./contacto.html">Contacto</a>
-            </li>
-        </ul>
     </nav>
     <main>
         <section class="agua">
