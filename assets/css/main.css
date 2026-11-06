@@ -456,16 +456,6 @@ figure figcaption {
    EFECTOS Y TRANSICIONES
    ===================================================== */
 
-button,
-input,
-a {
-    font-family: inherit;
-}
-
-a,
-button {
-    -webkit-tap-highlight-color: transparent;
-}
 
 ::selection {
     color: white;
@@ -564,7 +554,7 @@ body {
 ========================================= */
 
 main {
-    min(94%, var(--container-width));
+    min-width: 94%, var(--container-width);
     min-height: 100vh;
     padding: 60px 20px;
 }
@@ -698,7 +688,7 @@ legend {
 ========================================= */
 
 #formContacto li:has(input[type="radio"]) {
-    display: blo;
+    display: block;
     flex-direction: row;
     align-items: center;
     gap: 9px;
