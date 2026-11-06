@@ -1,21 +1,35 @@
-<h2 style="display: none">Menú Principal</h2>
-<input id="icon-menu" name="icon-menu" type="checkbox" />
-<label for="icon-menu" class="icon-menu" aria-label="Abrir/Cerrar menú">Menú</label>
+<h2 class="visually-hidden">Menú Principal</h2>
 
+<!-- Control del menú móvil -->
+<input type="checkbox" id="icon-menu" aria-label="Abrir menú">
+
+<label for="icon-menu" class="icon-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+
+<!-- Logo -->
 <a href="./index.html" class="logo">
     <figure>
         <img src="./assets/img/logo.svg" alt="Main logo">
     </figure>
-    MI EMPRESA
+    <span>MI EMPRESA</span>
 </a>
 
-<ul>
+<!-- Navegación -->
+<ul class="nav-links">
     <li>
         <a href="./index.html">Inicio</a>
     </li>
-    <li>
-        <a href="#">Categorías</a>
-        <ul>
+
+    <li class="has-submenu">
+        <a href="#" class="submenu-link">
+            Categorías
+            <span class="arrow"></span>
+        </a>
+
+        <ul class="submenu">
             <li>
                 <a href="./servicios.html">Servicios</a>
             </li>
@@ -24,10 +38,14 @@
             </li>
         </ul>
     </li>
+
     <li>
         <a href="./nosotros.html">Nosotros</a>
     </li>
+
     <li>
-        <a href="./contacto.html">Contacto</a>
+        <a href="./contacto.html" class="contact-link">
+            Contacto
+        </a>
     </li>
 </ul>

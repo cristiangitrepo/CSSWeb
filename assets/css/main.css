@@ -12,7 +12,7 @@
     --color-text: #292929;
     --color-muted: #777777;
     --color-primary: #df251b;
-    --color-primary-hover: #b91e17;
+    --color-primary-hover: #06B489;
 
     --font-main: 'Nunito Sans', sans-serif;
     --font-secondary: 'Inter', sans-serif;
@@ -23,11 +23,18 @@
     --container-width: 1200px;
 
     /* Galería de imágenes */
-    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
-    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
-    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
-    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
-    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2026/03/18/20/51/vandesart-team-10181201_1280.jpg");
+    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2026/04/20/14/39/14-39-57-2_1280.jpg");
+    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2026/08/05/17/03/17-03-02-597_1280.jpg");
+    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2026/03/15/04/29/geralt-presentation-10174584_1280.jpg");
+    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2026/07/06/12/34/12-34-58-327_1280.jpg");
+
+    --bg-img-galeria-6: url("https://cdn.pixabay.com/photo/2026/04/03/14/59/konkapo-crm-10207454_1280.jpg");
+    --bg-img-galeria-7: url("https://cdn.pixabay.com/photo/2026/07/18/15/37/15-37-54-811_1280.jpg");
+    --bg-img-galeria-8: url("https://cdn.pixabay.com/photo/2026/05/31/11/43/norman_gil-ai-generated-10307076_1280.png");
+    --bg-img-galeria-9: url("https://cdn.pixabay.com/photo/2026/10/09/19/14/19-14-42-517_1280.jpg");
+    --bg-img-galeria-10: url("https://cdn.pixabay.com/photo/2026/08/28/17/18/17-18-43-13_1280.jpg");
+
 }
 
 /* Selector de clasess que comiencen por icon- */
@@ -36,6 +43,7 @@ span[class^=" icon-"] {
     &::before {
         content: "";
         display: inline-block;
+        margin-right: 0.25em;
         width: 1em;
         height: 1em;
         vertical-align: text-top;
@@ -64,6 +72,26 @@ span[class^=" icon-"] {
 
 .diapositiva-5 {
     background-image: var(--bg-img-galeria-5);
+}
+
+.diapositiva-6 {
+    background-image: var(--bg-img-galeria-6);
+}
+
+.diapositiva-7 {
+    background-image: var(--bg-img-galeria-7);
+}
+
+.diapositiva-8 {
+    background-image: var(--bg-img-galeria-8);
+}
+
+.diapositiva-9 {
+    background-image: var(--bg-img-galeria-9);
+}
+
+.diapositiva-10 {
+    background-image: var(--bg-img-galeria-10);
 }
 
 /* RESET */
@@ -102,7 +130,7 @@ a {
 }
 
 a:hover {
-    color: #c48c89;
+    color: var(--color-primary-hover);
 }
 
 ul {
@@ -211,7 +239,7 @@ main p {
 .diapositiva-3,
 .diapositiva-4,
 .diapositiva-5 {
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -313,7 +341,7 @@ figure figcaption {
    ===================================================== */
 
 .carrousel-container {
-    padding: 35px 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -332,7 +360,7 @@ figure figcaption {
     gap: 20px;
 
     width: max-content;
-    animation: desplazamiento 25s linear infinite;
+    animation: desplazamiento 10s linear infinite;
 }
 
 .carrousel:hover {
@@ -351,6 +379,7 @@ figure figcaption {
     overflow: hidden;
     border-radius: var(--radius);
     background-color: #ddd;
+    background-position: center;
 
     box-shadow: var(--shadow);
 }
@@ -443,106 +472,9 @@ button {
     background: var(--color-primary);
 }
 
-/* =====================================================
-   RESPONSIVE - TABLETS
-   ===================================================== */
-
-@media (max-width: 900px) {
-
-    nav.principal {
-        padding: 12px 20px;
-    }
-
-    nav.principal>ul {
-        gap: 20px;
-    }
-
-    main {
-        width: 96%;
-    }
-
-    main>section {
-        padding: 25px 4%;
-    }
-
-    .galeriaFlex li {
-        flex-basis: 200px;
-    }
-
-    .galeria li {
-        flex-basis: 180px;
-    }
-}
-
-/* =====================================================
-   RESPONSIVE - MÓVILES
-   ===================================================== */
-
 @media (max-width: 650px) {
 
-    nav.principal {
-        min-height: 65px;
-        flex-wrap: wrap;
-        margin-top: 10px;
-    }
-
-    nav.principal .logo {
-        width: 105px;
-    }
-
-    .icon-menu {
-        display: block;
-        order: 3;
-
-        padding: 8px 12px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-
-        font-size: 12px;
-        font-weight: 700;
-    }
-
-    nav.principal>ul {
-        display: none;
-        order: 4;
-
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    #icon-menu:checked~ul {
-        display: flex;
-    }
-
-    nav.principal>ul>li {
-        width: 100%;
-    }
-
-    nav.principal>ul>li>a {
-        padding: 12px;
-        border-top: 1px solid #eee;
-    }
-
-    nav.principal ul ul {
-        position: static;
-        display: none;
-
-        padding-left: 20px;
-        box-shadow: none;
-
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-    }
-
-    nav.principal ul li:hover>ul {
-        display: block;
-    }
-
+    /* Resto de tus adaptaciones responsivas para el main y elementos multimedia */
     main {
         width: 100%;
         padding-top: 15px;
@@ -643,7 +575,7 @@ main section {
     background-color: #ffffff;
     padding: 45px 55px;
     border-radius: 4px;
-    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
 /* =========================================
@@ -929,25 +861,7 @@ a.back:hover {
     border-color: #292929 !important;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN - TABLETS
-========================================= */
 
-@media screen and (max-width: 768px) {
-
-    main {
-        padding: 30px 15px;
-    }
-
-    main section {
-        padding: 35px 30px;
-    }
-
-    main section>header h2 {
-        letter-spacing: -1px;
-    }
-
-}
 
 /* =========================================
    RESPONSIVE DESIGN - MÓVILES
@@ -955,21 +869,6 @@ a.back:hover {
 
 @media screen and (max-width: 550px) {
 
-    main {
-        padding: 15px 10px;
-    }
-
-    main section {
-        padding: 25px 20px;
-    }
-
-    main section>header h2 {
-        font-size: 30px;
-    }
-
-    article h3 {
-        font-size: 20px;
-    }
 
     #formContacto fieldset>ul:first-of-type {
         grid-template-columns: 1fr;
