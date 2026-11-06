@@ -71,6 +71,18 @@
 
 /* Columnas */
 
+.footer-contact a {
+    display: flex;
+    margin: 10px 0;
+    justify-content: left;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-contact a:hover {
+    transform: scale(1.025);
+}
+
 .footer-column h3,
 .footer-contact h3 {
     font-size: 11px;
