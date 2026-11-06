@@ -1,0 +1,176 @@
+        /* Variables de diseño (puedes ajustarlas a tu paleta de colores) */
+        :root {
+            --primary-color: #df251b;
+            --primary-dark: #b91e17;
+            --text-color: #1f2937;
+            --text-muted: #4b5563;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Estilos generales de la sección */
+        .section {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 80px 20px;
+            line-height: 1.6;
+        }
+
+        /* Contenedor principal para limitar el ancho y centrar */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Encabezados y texto principal */
+        .container h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 16px;
+            letter-spacing: -0.025em;
+        }
+
+        .container .lead {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        /* Estructura de tarjetas en Grid */
+        .card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        /* Tarjeta individual de servicio */
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Efecto hover al pasar el ratón por encima de la tarjeta */
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        /* Títulos internos de las tarjetas */
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Listas de valores */
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card li {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        /* Viñeta personalizada con el color primario */
+        .card li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .card li strong {
+            color: var(--text-color);
+        }
+
+        /* --- Cuadrícula de Servicios (Grid Layout) --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+
+        /* Párrafo de cada servicio */
+        .card p {
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ==========================================
+                   Logos de Marcas Aliadas
+        ================================---------- */
+        .client-logos ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .client-logos img {
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .client-logos img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+
+        .card footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        cite {
+            font-style: normal;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: block;
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: var(--primary-color);
+        }

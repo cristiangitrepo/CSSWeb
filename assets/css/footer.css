@@ -54,7 +54,7 @@
     width: 25px;
     height: 25px;
     /* border: 1px solid #777; */
-    /* border-radius: 50%; */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,7 +91,7 @@
 
 .footer-column a {
     color: #bdbdbd;
-    font-size: 10px;
+    font-size: 12px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -104,7 +104,7 @@
 
 .footer-contact p {
     color: #bdbdbd;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.7;
 }
 
@@ -122,7 +122,7 @@
 
 .footer-bottom p,
 .footer-bottom a {
-    font-size: 9px;
+    font-size: 11px;
     color: #999999;
 }
 
